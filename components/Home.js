@@ -1,7 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert} from 'react-native';
 
-export default function Home() {
+function Home() {
+
+
+  const handleClick = () => {
+    
+    if (styles.amountOkDisable) {
+      return Alert.alert('Aqui va la propuesta');
+    };
+  }
 
     return (
         <View style={styles.container}>
@@ -13,8 +21,9 @@ export default function Home() {
                 source={require('../assets/Fill-.png')}
                 />
             </View>
+
             <View style={styles.headerRight}>
-              <Text >TU PLATA DISPONIBLE</Text>
+              <Text style={styles.headerText}  >TU PLATA DISPONIBLE</Text>
               <Text style={styles.headerAmount} >$300</Text>
             </View>
           </View>
@@ -26,20 +35,22 @@ export default function Home() {
               <Text style={styles.subTitle}>Hoy</Text>
           </View>
        
-            <View style={styles.sections}>
-    
-              <View style={styles.Voucher}>
+        <View style={styles.sections}>
+         
+            <TouchableOpacity  style={styles.Voucher} onPress={handleClick}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Retiro de plata por transferencia</Text>
                 </View>
                 <View style={styles.VoucherLeft}>
-                <View style={styles.amountOk}>
-                  <Text style={styles.amount} >+$300</Text>
+                <View style={styles.amountOkDisable}>
+                  <Text style={styles.amountDisable} >+$300</Text>
                   </View>
-                  <Text style={styles.description}>Retiro en curso</Text>
+                  <Text style={styles.descriptionDisable}>Retiro en curso</Text>
                 </View>
-              </View>
+              </TouchableOpacity>
+     
+
     
               <View style={styles.Voucher}> 
                 <View style={styles.VoucherRight}>
@@ -74,6 +85,7 @@ export default function Home() {
     
       );
 }
+export default Home
 
 const styles = StyleSheet.create({
     container: {
@@ -101,6 +113,9 @@ const styles = StyleSheet.create({
     headerRight:{
      justifyContent:'flex-end'
 
+    },
+    headerText:{
+      fontFamily: 'Gotham-Book',
     },
     headerAmount:{
       fontFamily:'Gotham-Bold',
@@ -152,13 +167,28 @@ const styles = StyleSheet.create({
       flexWrap:"wrap",
       alignContent:"flex-start"
     },
+    amountOkDisable:{
+      borderColor:'#ADADAD',
+      borderWidth: 1,
+      borderRadius:10,
+      height:35,
+      width:100,
+      
+    },
     amountOk:{
       borderColor:'#f0f',
       borderRadius:10,
       height:35,
       width:100,
-    
       backgroundColor: '#D4F9F5',
+    },
+    amountDisable:{
+      color:'#ADADAD',
+      fontFamily:'Gotham-Bold',
+      justifyContent:'center',
+      alignContent:'center',
+      textAlign:'center',
+      paddingTop:10,
     },
     amount:{
       color:'#00BAA4',
@@ -182,8 +212,15 @@ const styles = StyleSheet.create({
       textAlign:'center',
       color:'#00BAA4',
       fontFamily:'Gotham-Medium',
-    }
+    
+    },
+    descriptionDisable:{
+      fontSize:12,
+      textAlign:'center',
+      color:'#ADADAD',
+      fontFamily:'Gotham-Medium',
+    },
 
     
-  });
+  })
   
