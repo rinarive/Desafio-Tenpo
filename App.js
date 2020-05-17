@@ -21,7 +21,10 @@ export default function App() {
     return <AppLoading />;
   } else {
     return  (
+      <>
       <Home />  
+      
+      </>
     )
   }
 }

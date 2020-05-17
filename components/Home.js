@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Alert} from 'react-native';
 
+
 function Home() {
 
 
@@ -44,7 +45,7 @@ function Home() {
                 </View>
                 <View style={styles.VoucherLeft}>
                 <View style={styles.amountOkDisable}>
-                  <Text style={styles.amountDisable} >+$300</Text>
+                  <Text style={styles.amountDisable} >-$1.000</Text>
                   </View>
                   <Text style={styles.descriptionDisable}>Retiro en curso</Text>
                 </View>
@@ -81,6 +82,7 @@ function Home() {
           
           </View>
           </View>
+         
         </View>
     
       );
