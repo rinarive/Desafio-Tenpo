@@ -1,18 +1,30 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import ProgressBar from './Components/ProgressBar';
+import Home from './components/Home'
+
+import { useFonts } from '@use-expo/font';
+import { AppLoading } from 'expo';
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <ProgressBar />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    justifyContent: 'center',
-  },
-});
+
+  const [fontsLoaded] = useFonts({    
+
+    'Gotham-Bold' : require('./assets/Fonts/Gotham-Bold.ttf'),
+    'Gotham-Book' : require('./assets/Fonts/Gotham-Book.ttf'),
+    'Gotham-Medium' : require('./assets/Fonts/Gotham-Medium.ttf'),
+
+
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return  (
+      <>
+      <Home />  
+      
+      </>
+    )
+  }
+}
