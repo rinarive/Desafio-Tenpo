@@ -110,7 +110,7 @@ export default function Form() {
     },
 
     containerFaq: {
-      flex: 0.3,
+      
       justifyContent: 'space-evenly',
       backgroundColor: '#F7F7F7',
       borderRadius: 8,
@@ -119,7 +119,7 @@ export default function Form() {
       marginBottom: 20,
       paddingTop: 8,
       paddingBottom: 8,
-      // borderTopWidth: 16
+     
     },
 
     question: {
@@ -134,17 +134,23 @@ export default function Form() {
     },
   
     faq: {
-      // position: 'relative',
+
       fontSize: 25,
       color: '#00BAA4',
       marginRight: 8
     },
+    textTitle:{
+      fontFamily:'Gotham-Bold',
+      fontSize: 18,
+    },
 
     textFaq: {
-      fontSize: 16,
+      fontSize: 18,
       color: '#595959',
       marginBottom: 14,
       textAlign: 'left',
+      color: '#595959',
+      fontFamily: 'Gotham-Book',
     },
 
     divider: {
@@ -191,6 +197,9 @@ export default function Form() {
 
     textForm: {
       marginBottom: 14,
+      fontSize:12,
+      color: '#595959',
+      fontFamily: 'Gotham-Book',
     },
     
     textInput: {
