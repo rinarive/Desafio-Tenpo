@@ -41,6 +41,7 @@ export default function Form() {
 
              <View style={styles.containerBtn}>
                 <Button
+                color={'#00BAA4'}
                 style={styles.btnSend}
                 title='Enviar'
                 onPress={()=>setModal(false)}/> 
@@ -209,8 +210,8 @@ export default function Form() {
       color: '#00BAA4'
     },
 
-    btnSend: {
-      color: '#00BAA4'
+    Button: {
+      backgroundColor: 'red'
     }
 
 
