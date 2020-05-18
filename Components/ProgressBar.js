@@ -11,7 +11,7 @@ function ProgressBar() {
  
 
     return (
-        <View>
+        <View >
             <Text style={styles.titleText}>
                 Tu retiro está en curso:
             </Text>
