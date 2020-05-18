@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Modal, Button, TextInput, Image } from 'react-native';
-import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons';
+import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons'
 
 
 
@@ -209,8 +209,6 @@ export default function Form() {
       marginTop: 14,
       color: '#00BAA4'
     },
-
-
 
   });
 

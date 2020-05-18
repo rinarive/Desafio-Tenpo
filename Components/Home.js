@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Alert} from 'react-native';
 
 
-function Home() {
+function Home({Navigation}) {
 
 
   const handleClick = () => {
@@ -38,7 +38,7 @@ function Home() {
        
         <View style={styles.sections}>
          
-            <TouchableOpacity  style={styles.Voucher} onPress={handleClick}>
+            <TouchableOpacity  style={styles.Voucher} onPress={()=> Navigation.push('')}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Retiro de plata por transferencia</Text>
