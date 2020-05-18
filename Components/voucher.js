@@ -1,8 +1,12 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet} from 'react-native';
 
+
 function Voucher(){
     return(
+   
+        <View style={styles.content}>
+
         <View style={styles.voucherContainer}>
             <View style={styles.voucherImage}>
                 <Image
@@ -16,8 +20,10 @@ function Voucher(){
                 <Text style={styles.voucherDestine}>Hasta N de cuenta destino</Text>
                 <Text style={styles.voucherAmount}>$1.000</Text>
             </View>
+        </View>     
 
-        </View>
+      </View>  
+     
     );
 
    
@@ -26,25 +32,25 @@ export default Voucher
 
 
 const styles = StyleSheet.create({
-    voucherContainer:{
-        flex:0.5,
-        justifyContent:'center',
-        flexDirection: "row",
-        marginTop: 20,
 
+    
+    voucherContainer:{
+        height:160,
+        justifyContent:'space-around',
+        flexDirection: "row",
+        width:300,
+        backgroundColor:'white',
+        borderRadius:10,
+        alignItems:'center',
+        
+      
     },
     voucherImage:{
         width:50,
         height: 50,
-        flex:0.5
-
+        marginLeft:10
     },
-    money:{
-      
-        fontSize:20,
-        marginTop:10,
-        marginBottom:10,
-    },
+ 
     voucherText:{
         fontFamily:'Gotham-Bold',
     },
