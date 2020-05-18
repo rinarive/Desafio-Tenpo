@@ -1,26 +1,53 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Modal, Button, Separator } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Modal, Button, TextInput, Image } from 'react-native';
 import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons'
 
 
+
 export default function Form() {
-    const [modal, setModal]= useState (false)
+    const [modal, setModal] = useState (false)
 
     const openModal = () => {
         console.log("probando")
         setModal(true)
     }
+
+
     
     return (
 
       <View style={styles.container}>
-
+        
         <Modal visible={modal}
-        animationType="slide">
-            <Text>hola soy el modal</Text>
-            <Icon  
-            name="close"
-            onPress={()=>setModal(false)}/>
+        animationType="slide"
+        transparent={true}>
+
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Icon  
+              name="close"
+              style={styles.closeIcon}
+              onPress={()=>setModal(false)}/>
+
+              <View style={styles.textForm}>
+               <Text style={styles.textTitle}>Envía un reclamo:</Text>
+               <Text>No se actualiza mi saldo</Text>
+              </View>
+              
+              <TextInput 
+              multiline  
+              style={styles.textInput}
+              placeholder='Explícanos a detalle la situación'/>
+
+             <View style={styles.containerBtn}>
+                <Button
+                style={styles.btnSend}
+                title='Enviar'
+                onPress={()=>setModal(false)}/> 
+             </View>
+                        
+            </View>  
+          </View>
 
         </Modal>
 
@@ -62,10 +89,12 @@ export default function Form() {
         </View>
 
         <View style={styles.chatboxContainer}>
-          <Icon
-          name="chat-processing"
-          style={styles.chatbox}/>
-        </View>
+          <TouchableOpacity>
+            <Image
+            source={require('../assets/chatbox.png')}
+            style={styles.chatbox}/>
+          </TouchableOpacity>
+        </View> 
       
       </View>
 
@@ -75,21 +104,19 @@ export default function Form() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#00C4B3',
+      backgroundColor: '#F1F1F1',
       justifyContent: 'flex-end',
       width:'100%' ,
     },
 
     containerFaq: {
       flex: 0.3,
-      // justifyContent: 'center',
       justifyContent: 'space-evenly',
-      // justifyContent:'space-around',
       backgroundColor: '#F7F7F7',
       borderRadius: 8,
       marginLeft:16,
       marginRight: 16,
-      marginBottom: 22,
+      marginBottom: 20,
       paddingTop: 8,
       paddingBottom: 8,
       // borderTopWidth: 16
@@ -125,20 +152,68 @@ export default function Form() {
       height:1,
       backgroundColor: '#D6D6D6',
       opacity: 5
-
     },
 
-    chatboxContainer: {
-      backgroundColor: '#595959'
-
+    chatboxContainer: {  
+      marginRight: 16,
     },
 
     chatbox: {
-      fontSize:30,
-      marginBottom: 44
+      alignSelf: 'flex-end',
+      height:50,
+      width: 50,
+      marginBottom: 34
+    },
+    
+    //____________MODAL STYLES____________
 
+    centeredView: {
+      backgroundColor: '#aaaa',
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",   
+    }, 
+
+    modalView: {
+      paddingHorizontal: 24,
+      backgroundColor: 'white',
+      borderRadius: 10,
+      width: 312,
+      height:470,
+    },
+
+    closeIcon: {
+      alignSelf: 'flex-end',
+      fontSize: 30,
+      marginTop: 26,
+      color: '#595959'
+    },
+
+    textForm: {
+      marginBottom: 14,
+    },
+    
+    textInput: {
+      justifyContent:'flex-start',
+      textAlignVertical:'top',
+      height: 300, 
+      borderColor: '#595959', 
+      borderWidth: 0.5
+    },
+
+    containerBtn: {
+      flexDirection: 'row',
+      alignSelf:'flex-end',
+      width: 70,
+      marginTop: 14,
+      color: '#00BAA4'
+    },
+
+    btnSend: {
+      color: '#00BAA4'
     }
-     
+
+
   });
 
-  
+ 
