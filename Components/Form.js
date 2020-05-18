@@ -40,10 +40,11 @@ export default function Form() {
               placeholder='Explícanos a detalle la situación'/>
 
              <View style={styles.containerBtn}>
-                <Button
-                style={styles.btnSend}
-                title='Enviar'
-                onPress={()=>setModal(false)}/> 
+             <Button
+              color={'#00BAA4'}
+              style={styles.btnSend}
+              title='Enviar'
+              onPress={()=>setModal(false)}/> 
              </View>
                         
             </View>  
