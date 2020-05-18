@@ -1,8 +1,10 @@
 import React from 'react';
-import Home from './components/Home'
-
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
+import Home from './Components/Home'
+import ProgressBar from './Components/ProgressBar'
+
+
 
 
 export default function App() {
@@ -14,7 +16,6 @@ export default function App() {
     'Gotham-Book' : require('./assets/Fonts/Gotham-Book.ttf'),
     'Gotham-Medium' : require('./assets/Fonts/Gotham-Medium.ttf'),
 
-
   });
 
   if (!fontsLoaded) {
@@ -22,7 +23,7 @@ export default function App() {
   } else {
     return  (
       <>
-      <Home />  
+      <ProgressBar />  
       
       </>
     )

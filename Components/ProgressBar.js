@@ -8,7 +8,13 @@ function ProgressBar() {
     const [transfer, setTransfer] = useState(false)
     const [complete, setComplete] = useState(false)
 
- 
+  
+    // setTimeout(() => {
+    //     if(datos === true){
+    //       setValidate(true)  
+    //     }    
+    // } , 3000)
+
 
     return (
         <View>
