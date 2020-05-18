@@ -1,25 +1,53 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Form from './Components/Form';
-// import { MaterialCommuntyIcons as Icon } from 'react-native-vector-icons'
- 
-export default function App() {
-  return (
-   
+// import Home from './components/Home'
 
-    <View style={styles.container}>
-       <Form/>
-    </View>
-  );
+import { useFonts } from '@use-expo/font';
+import { AppLoading } from 'expo';
+
+
+export default function App() {
+    const [fontsLoaded] = useFonts({    
+
+    'Gotham-Bold' : require('./assets/Fonts/Gotham-Bold.ttf'),
+    'Gotham-Book' : require('./assets/Fonts/Gotham-Book.ttf'),
+    'Gotham-Medium' : require('./assets/Fonts/Gotham-Medium.ttf'),
+
+
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return  (
+      <>
+      {/* <Home />   */}
+      <Form/>
+      
+      </>
+    )
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
+//     <View style={styles.container}>
+//        <Form/>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
 
 
-});
+// });
+
+
+
+
