@@ -2,16 +2,8 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
-import Home from './Components/Home'
-import ProgressBar from './Components/ProgressBar'
-
-
-
-
 import Transaction from './Components/Transaction';
 import Home from './Components/Home';
 
