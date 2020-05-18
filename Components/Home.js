@@ -1,16 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
-function Home({Navigation}) {
-
-
-  const handleClick = () => {
-    
-    if (styles.amountOkDisable) {
-      return Alert.alert('Aqui va la propuesta');
-    };
-  }
+function Home({navigation}) {
 
     return (
         <View style={styles.container}>
@@ -38,7 +30,8 @@ function Home({Navigation}) {
        
         <View style={styles.sections}>
          
-            <TouchableOpacity  style={styles.Voucher} onPress={()=> Navigation.push('')}>
+            <TouchableOpacity  style={styles.Voucher} onPress={() =>
+            navigation.navigate('Transaction')}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Retiro de plata por transferencia</Text>
@@ -49,10 +42,8 @@ function Home({Navigation}) {
                   </View>
                   <Text style={styles.descriptionDisable}>Retiro en curso</Text>
                 </View>
-              </TouchableOpacity>
-     
+            </TouchableOpacity>
 
-    
               <View style={styles.Voucher}> 
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
@@ -132,16 +123,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#f7f7f7'
     },
     init:{
-   
       alignItems:'flex-start'
-
     },
       title:{
       fontFamily:'Gotham-Bold',
       marginTop:40,
       fontSize:22,
-      
-     
     
     },
     subTitle:{

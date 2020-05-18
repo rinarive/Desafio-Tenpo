@@ -11,7 +11,7 @@ import ProgressBar from './Components/ProgressBar'
 
 
 
-//import Home from './Components/Home'
+
 import Transaction from './Components/Transaction';
 import Home from './Components/Home';
 
@@ -32,15 +32,15 @@ export default function App() {
   } else {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+    <Stack.Navigator>
+      <Stack.Screen
         name="Home"
-        component={Transaction}
-        options={{ title: 'Welcome' }}
+        component={Home}
+        options={{ title: 'Retiro de plata' }}
       />
-      <Stack.Screen name="Voucher" component={Home} />
+      <Stack.Screen name="Transaction" component={Transaction} />
     </Stack.Navigator>
-    </NavigationContainer>
+  </NavigationContainer>
   );
 }
 }
