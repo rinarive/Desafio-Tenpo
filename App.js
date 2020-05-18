@@ -7,8 +7,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
 
-import Home from './Components/Home'
-import Voucher from './Components/voucher';
+//import Home from './Components/Home'
+import Transaction from './Components/Transaction';
+import Home from './Components/Home';
 
 
 const Stack = createStackNavigator();
@@ -31,10 +32,10 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
         name="Home"
-        component={Home}
+        component={Transaction}
         options={{ title: 'Welcome' }}
       />
-      <Stack.Screen name="Voucher" component={Voucher} />
+      <Stack.Screen name="Voucher" component={Home} />
     </Stack.Navigator>
     </NavigationContainer>
   );

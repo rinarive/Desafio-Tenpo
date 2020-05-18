@@ -63,6 +63,9 @@ function ProgressBar() {
 const styles = StyleSheet.create({
     titleText: {
         padding: '5%',
+        fontSize:14,
+        color: '#595959',
+        fontFamily: 'Gotham-Medium',
     },
     fullbar: {        
       flexDirection: 'row',
@@ -80,6 +83,8 @@ const styles = StyleSheet.create({
         fontSize: 10,
         width:'70%',
         textAlign: 'center',
+        color: '#595959',
+        fontFamily: 'Gotham-Book',
     },
     line: {
         height: 1,

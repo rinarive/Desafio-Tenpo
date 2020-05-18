@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet} from 'react-native';
-import ProgressBar from './ProgressBar';
+
 
 function Voucher(){
     return(
-        <View style={styles.container}>
-        
+   
         <View style={styles.content}>
 
         <View style={styles.voucherContainer}>
@@ -21,12 +20,10 @@ function Voucher(){
                 <Text style={styles.voucherDestine}>Hasta N de cuenta destino</Text>
                 <Text style={styles.voucherAmount}>$1.000</Text>
             </View>
-        </View>
-            <ProgressBar/>
-        
+        </View>     
 
       </View>  
-        </View>
+     
     );
 
    
@@ -35,37 +32,25 @@ export default Voucher
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        backgroundColor: '#fff',
-        flexDirection: "column",
-      },
-    content:{
-        flex:1,
-    },
+
+    
     voucherContainer:{
-        flex:0.3,
-        justifyContent:'center',
+        height:160,
+        justifyContent:'space-around',
         flexDirection: "row",
         width:300,
-   
         backgroundColor:'white',
         borderRadius:10,
-    
-      
+        alignItems:'center',
+        
       
     },
     voucherImage:{
         width:50,
         height: 50,
-        flex:0.5
-
+        marginLeft:10
     },
-    money:{
-        fontSize:20,
-        marginTop:10,
-        marginBottom:10,
-    },
+ 
     voucherText:{
         fontFamily:'Gotham-Bold',
     },
