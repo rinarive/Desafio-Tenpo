@@ -1,16 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
-function Home({Navigation}) {
+function Home() {
+  const [change, setChange] = useState (false)
 
+    const openTransaction = () => {
+        console.log("probando")
+        setChange(true)
+    }
 
-  const handleClick = () => {
-    
-    if (styles.amountOkDisable) {
-      return Alert.alert('Aqui va la propuesta');
-    };
-  }
 
     return (
         <View style={styles.container}>
@@ -38,7 +37,7 @@ function Home({Navigation}) {
        
         <View style={styles.sections}>
          
-            <TouchableOpacity  style={styles.Voucher} onPress={()=> Navigation.push('')}>
+            <TouchableOpacity  style={styles.Voucher} onPress={openTransaction}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Retiro de plata por transferencia</Text>

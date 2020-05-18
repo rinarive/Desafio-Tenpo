@@ -1,18 +1,18 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+//import { NavigationContainer } from '@react-navigation/native';
+//import { createStackNavigator } from '@react-navigation/stack';
 
 
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
 
-//import Home from './Components/Home'
-import Transaction from './Components/Transaction';
+
+//import Transaction from './Components/Transaction';
 import Home from './Components/Home';
 
 
-const Stack = createStackNavigator();
+//const Stack = createStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({    
@@ -28,16 +28,7 @@ export default function App() {
     return <AppLoading />;
   } else {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-        name="Home"
-        component={Transaction}
-        options={{ title: 'Welcome' }}
-      />
-      <Stack.Screen name="Voucher" component={Home} />
-    </Stack.Navigator>
-    </NavigationContainer>
+    <Home/>
   );
 }
 }

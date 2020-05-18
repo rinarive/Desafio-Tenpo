@@ -6,12 +6,15 @@ import Form from './Form';
 
 
 function Transaction(props) {
+    const [change, setChange] = useState (false)
+
+    setChange(false)
+
     return (
         <View style={styles.container}>
             <Voucher/>
             <ProgressBar/>
             <Form/>
-            
         </View>
     );
 }
