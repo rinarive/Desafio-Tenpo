@@ -5,10 +5,8 @@ import ProgressBar from './ProgressBar';
 import Form from './Form';
 
 
-function Transaction(props) {
-    const [change, setChange] = useState (false)
+function Transaction({navigation}) {
 
-    setChange(false)
 
     return (
         <View style={styles.container}>
@@ -20,6 +18,7 @@ function Transaction(props) {
 }
 
 export default Transaction;
+
 const styles = StyleSheet.create({
     container: {
         flex:1,

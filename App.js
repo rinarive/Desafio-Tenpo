@@ -1,18 +1,18 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-//import { NavigationContainer } from '@react-navigation/native';
-//import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
 
 
-//import Transaction from './Components/Transaction';
+import Transaction from './Components/Transaction';
 import Home from './Components/Home';
 
 
-//const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({    
@@ -28,7 +28,16 @@ export default function App() {
     return <AppLoading />;
   } else {
   return (
-    <Home/>
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ title: 'Retiro de plata' }}
+      />
+      <Stack.Screen name="Transaction" component={Transaction} />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
 }

@@ -2,14 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
-function Home() {
-  const [change, setChange] = useState (false)
-
-    const openTransaction = () => {
-        console.log("probando")
-        setChange(true)
-    }
-
+function Home({navigation}) {
 
     return (
         <View style={styles.container}>
@@ -37,7 +30,8 @@ function Home() {
        
         <View style={styles.sections}>
          
-            <TouchableOpacity  style={styles.Voucher} onPress={openTransaction}>
+            <TouchableOpacity  style={styles.Voucher} onPress={() =>
+            navigation.navigate('Transaction')}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Retiro de plata por transferencia</Text>
@@ -48,10 +42,8 @@ function Home() {
                   </View>
                   <Text style={styles.descriptionDisable}>Retiro en curso</Text>
                 </View>
-              </TouchableOpacity>
-     
+            </TouchableOpacity>
 
-    
               <View style={styles.Voucher}> 
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
@@ -131,16 +123,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#f7f7f7'
     },
     init:{
-   
       alignItems:'flex-start'
-
     },
       title:{
       fontFamily:'Gotham-Bold',
       marginTop:40,
       fontSize:22,
-      
-     
     
     },
     subTitle:{
