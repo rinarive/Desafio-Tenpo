@@ -22,7 +22,7 @@ export default function App() {
   } else {
     return  (
       <>
-      {/* <Home />   */}
+      <Home />  
       <Form/>
       
       </>
@@ -31,22 +31,7 @@ export default function App() {
 }
 
 
-//     <View style={styles.container}>
-//        <Form/>
-//     </View>
-//   );
-// }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-
-
-// });
 
 
 
