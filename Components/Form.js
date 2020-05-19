@@ -56,7 +56,6 @@ export default function Form() {
         </Modal>
 
         <View style={styles.containerFaq}>
-          <Text style={styles.titleText}>En caso de problemas:</Text>
           <View style={styles.question}>
             <TouchableOpacity style={styles.button} onPress={openModal}>
               <Icon
@@ -105,12 +104,7 @@ export default function Form() {
   }
   
   const styles = StyleSheet.create({
-    titleText: {
-      padding: '2%',
-      fontSize: 14,
-      color: "#595959",
-      fontFamily: "Gotham-Medium",
-    },
+
     container: {
       flex: 1,
       backgroundColor: '#F1F1F1',
