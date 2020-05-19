@@ -15,9 +15,9 @@ function Voucher(){
                 />
             </View>
             <View style={styles.voucherText}>
-                <Text style={styles.voucherTitle}>Datos de la transferencia</Text>
-                <Text style={styles.voucherDestine}>Desde n de cuenta origen</Text>
-                <Text style={styles.voucherDestine}>Hasta N de cuenta destino</Text>
+                <Text style={styles.voucherTitle}>Datos de Retiro</Text>
+                <Text style={styles.voucherDestine}>Desde N° de cuenta origen</Text>
+                <Text style={styles.voucherDestine}>Hasta N° de cuenta destino</Text>
                 <Text style={styles.voucherAmount}>$1.000</Text>
             </View>
         </View>     
@@ -35,15 +35,13 @@ const styles = StyleSheet.create({
 
     
     voucherContainer:{
-        height:160,
+        height:110,
         justifyContent:'space-around',
         flexDirection: "row",
         width:300,
         backgroundColor:'white',
         borderRadius:10,
-        alignItems:'center',
-        
-      
+        alignItems:'center',      
     },
     voucherImage:{
         width:50,
