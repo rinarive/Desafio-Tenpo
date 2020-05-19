@@ -2,12 +2,8 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
-
-//import Home from './Components/Home'
 import Transaction from './Components/Transaction';
 import Home from './Components/Home';
 
@@ -21,7 +17,6 @@ export default function App() {
     'Gotham-Book' : require('./assets/Fonts/Gotham-Book.ttf'),
     'Gotham-Medium' : require('./assets/Fonts/Gotham-Medium.ttf'),
 
-
   });
 
   if (!fontsLoaded) {
@@ -29,15 +24,15 @@ export default function App() {
   } else {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+    <Stack.Navigator>
+      <Stack.Screen
         name="Home"
-        component={Transaction}
-        options={{ title: 'Welcome' }}
+        component={Home}
+        options={{ title: 'Retiro de plata' }}
       />
-      <Stack.Screen name="Voucher" component={Home} />
+      <Stack.Screen name="Transaction" component={Transaction} />
     </Stack.Navigator>
-    </NavigationContainer>
+  </NavigationContainer>
   );
 }
 }

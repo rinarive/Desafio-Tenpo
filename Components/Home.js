@@ -1,20 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
-function Home({Navigation}) {
-
-
-  const handleClick = () => {
-    
-    if (styles.amountOkDisable) {
-      return Alert.alert('Aqui va la propuesta');
-    };
-  }
+function Home({navigation}) {
 
     return (
-        <View style={styles.container}>
-        
+        <View style={styles.container}>        
           <View style={styles.header}>
             <View style={styles.headerLeft}>
               <Image 
@@ -38,7 +29,8 @@ function Home({Navigation}) {
        
         <View style={styles.sections}>
          
-            <TouchableOpacity  style={styles.Voucher} onPress={()=> Navigation.push('')}>
+            <TouchableOpacity  style={styles.Voucher} onPress={() =>
+            navigation.navigate('Transaction')}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Retiro de plata por transferencia</Text>
@@ -49,40 +41,34 @@ function Home({Navigation}) {
                   </View>
                   <Text style={styles.descriptionDisable}>Retiro en curso</Text>
                 </View>
-              </TouchableOpacity>
-     
+            </TouchableOpacity>
 
-    
               <View style={styles.Voucher}> 
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
                   <Text style={styles.type}>Carga de plata por transferencia</Text>
                 </View>
                 <View style={styles.VoucherLeft}>
-                <View style={styles.amountOk}>
-                  <Text style={styles.amount} >+$1.000</Text>
+                  <View style={styles.amountOk}>
+                    <Text style={styles.amount} >+$1.000</Text>
                   </View>
                   <Text style={styles.description}>Carga de plata</Text>
                 </View>
-              </View>
-    
+              </View>    
               <View style={styles.Voucher}>
                 <View style={styles.VoucherRight}>
                   <Text style={styles.day}>13/05/2020</Text>
-                  <Text style={styles.type}>Pago de CONSUELO EUGENIA</Text>
+                  <Text style={styles.type}>Pago de Consuelo Eugenia</Text>
                 </View>
                 <View style={styles.VoucherLeft}>
                   <View style={styles.amountOk}>
-                  <Text style={styles.amount} >+$300</Text>
-                  </View>
-                  
+                    <Text style={styles.amount} >+$300</Text>
+                  </View>                  
                   <Text style={styles.description}>Transferencia</Text>
                 </View>
-              </View>
-          
+              </View>          
           </View>
-          </View>
-         
+          </View>         
         </View>
     
       );
@@ -95,30 +81,32 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       flexDirection: "column",
     },
+
     iconArrow:{
       width: 24,
       height: 19,
-
     },
+
     header: {
       flex: 0.08,
       alignItems: 'center',
       marginTop:50,
-      flexDirection: "row",
-  
+      flexDirection: "row",  
     },
+
     headerLeft: {
     width:80,
-    paddingLeft:20,
-  
+    paddingLeft:20,  
     },
+
     headerRight:{
      justifyContent:'flex-end'
-
     },
+
     headerText:{
       fontFamily: 'Gotham-Book',
     },
+
     headerAmount:{
       fontFamily:'Gotham-Bold',
       fontSize:20,
@@ -131,52 +119,45 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: '#f7f7f7'
     },
-    init:{
-   
-      alignItems:'flex-start'
 
+    init:{
+      alignItems:'flex-start'
     },
+    
       title:{
       fontFamily:'Gotham-Bold',
       marginTop:40,
-      fontSize:22,
-      
-     
-    
+      fontSize:22,    
     },
+
     subTitle:{
       marginTop:30,
     },
+
     Voucher:{
       flex:0.2,
       backgroundColor:'white',
       borderRadius:10,
       marginTop:10,
+      justifyContent: 'space-between',
       flexDirection:"row",
-      width:300,
-      padding:10,
-     
+      width:320,
+      padding:15,     
     },
-    VoucherLeft:{
-      flexWrap:"wrap",
-      alignContent:"flex-end"
-    },
+
     day:{
       color:'#ADADAD',
       fontFamily: 'Gotham-Book',
     },
-    VoucherRight:{
-      flexWrap:"wrap",
-      alignContent:"flex-start"
-    },
+    
     amountOkDisable:{
       borderColor:'#ADADAD',
       borderWidth: 1,
       borderRadius:10,
       height:35,
-      width:100,
-      
+      width:100,      
     },
+
     amountOk:{
       borderColor:'#f0f',
       borderRadius:10,
@@ -198,26 +179,28 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       alignContent:'center',
       textAlign:'center',
-      paddingTop:10,
- 
+      paddingTop:10, 
     },
+
     type:{
       fontSize:14,
-      width:180,
+      width:130,
       color: '#595959',
       fontFamily: 'Gotham-Book',
-      marginTop:5,
- 
+      marginTop:5, 
     },
+
     description:{
       fontSize:12,
       textAlign:'center',
       color:'#00BAA4',
       fontFamily:'Gotham-Medium',
-    
+      paddingTop: 5,    
     },
+
     descriptionDisable:{
       fontSize:12,
+      paddingTop: 5,
       textAlign:'center',
       color:'#ADADAD',
       fontFamily:'Gotham-Medium',

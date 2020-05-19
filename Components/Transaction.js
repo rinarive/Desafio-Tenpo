@@ -5,13 +5,14 @@ import ProgressBar from './ProgressBar';
 import Form from './Form';
 
 
-function Transaction(props) {
+function Transaction({navigation}) {
+
+
     return (
         <View style={styles.container}>
             <Voucher/>
             <ProgressBar/>
             <Form/>
-            
         </View>
     );
 }
@@ -21,10 +22,6 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         alignItems:'center',
-        justifyContent:'space-evenly',
-        position: 'relative', 
-        // alignContent: ''
-        // justifyContent: 'flex-start'
-        // paddingTop:30,
+        paddingTop:40,
     },
 })

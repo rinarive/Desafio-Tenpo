@@ -55,10 +55,8 @@ export default function Form() {
 
         </Modal>
 
-        <Text style={styles.textSimple}>Inicia un reclamo:</Text>
-
-
         <View style={styles.containerFaq}>
+          <Text style={styles.titleText}>En caso de problemas:</Text>
           <View style={styles.question}>
             <TouchableOpacity style={styles.button} onPress={openModal}>
               <Icon
@@ -89,7 +87,6 @@ export default function Form() {
               /> 
               <Text style={styles.textFaq}>¿No se pudo realizar tu retiro de dinero?</Text>
             </TouchableOpacity>
-            <View style={styles.divider}></View>
           </View> 
 
         </View>
@@ -108,28 +105,29 @@ export default function Form() {
   }
   
   const styles = StyleSheet.create({
+    titleText: {
+      padding: '2%',
+      fontSize: 14,
+      color: "#595959",
+      fontFamily: "Gotham-Medium",
+    },
     container: {
       flex: 1,
       backgroundColor: '#F1F1F1',
       justifyContent: 'flex-end',
       width:'100%' ,
-    },
-
-    textSimple: {
-
+      alignItems: "center",
 
     },
 
-    containerFaq: {
-      flex: 0.9,
+    containerFaq: {      
       justifyContent: 'space-evenly',
       backgroundColor: '#F7F7F7',
       borderRadius: 8,
-      marginLeft:16,
-      marginRight: 16,
-      marginBottom: 10,
-      paddingTop: 8,
-      paddingBottom: 8,
+      width: "92%",
+      marginTop:"25%",
+      paddingTop: "0.5%",
+      paddingBottom: "5%",
      
     },
 
@@ -145,7 +143,6 @@ export default function Form() {
     },
   
     faq: {
-
       fontSize: 25,
       color: '#00BAA4',
       marginRight: 8
@@ -173,13 +170,13 @@ export default function Form() {
 
     chatboxContainer: {  
       marginRight: 16,
+      alignSelf: 'flex-end',
     },
 
     chatbox: {
-      alignSelf: 'flex-end',
-      height:45,
-      width: 45,
-      marginBottom: 15
+      height:50,
+      width: 50,
+      marginBottom: 10,
     },
     
     //____________MODAL STYLES____________
@@ -209,7 +206,7 @@ export default function Form() {
     textForm: {
       marginBottom: 14,
       fontSize:12,
-      textDecorationColor: '#595959',
+      color: '#595959',
       fontFamily: 'Gotham-Book',
     },
     
