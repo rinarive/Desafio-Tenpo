@@ -2,12 +2,8 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
-
-
 import Transaction from './Components/Transaction';
 import Home from './Components/Home';
 
@@ -20,7 +16,6 @@ export default function App() {
     'Gotham-Bold' : require('./assets/Fonts/Gotham-Bold.ttf'),
     'Gotham-Book' : require('./assets/Fonts/Gotham-Book.ttf'),
     'Gotham-Medium' : require('./assets/Fonts/Gotham-Medium.ttf'),
-
 
   });
 

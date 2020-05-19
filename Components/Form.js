@@ -53,7 +53,7 @@ export default function Form() {
         </Modal>
 
         <View style={styles.containerFaq}>
-
+          <Text style={styles.titleText}>En caso de problemas:</Text>
           <View style={styles.question}>
             <TouchableOpacity style={styles.button} onPress={openModal}>
               <Icon
@@ -103,6 +103,12 @@ export default function Form() {
   }
   
   const styles = StyleSheet.create({
+    titleText: {
+      padding: '2%',
+      fontSize: 14,
+      color: "#595959",
+      fontFamily: "Gotham-Medium",
+    },
     container: {
       flex: 1,
       backgroundColor: '#F1F1F1',
@@ -110,14 +116,12 @@ export default function Form() {
       width:'100%' ,
     },
 
-    containerFaq: {
-      
+    containerFaq: {      
       justifyContent: 'space-evenly',
       backgroundColor: '#F7F7F7',
       borderRadius: 8,
       marginLeft:16,
       marginRight: 16,
-      marginBottom: 20,
       paddingTop: 8,
       paddingBottom: 8,
      
@@ -135,7 +139,6 @@ export default function Form() {
     },
   
     faq: {
-
       fontSize: 25,
       color: '#00BAA4',
       marginRight: 8
@@ -169,7 +172,7 @@ export default function Form() {
       alignSelf: 'flex-end',
       height:50,
       width: 50,
-      marginBottom: 34
+      marginBottom: 10,
     },
     
     //____________MODAL STYLES____________
