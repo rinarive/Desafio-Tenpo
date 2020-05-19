@@ -22,7 +22,7 @@ function ProgressBar() {
         }
       });
     }
-  }, 1000);
+  }, 3000);
 
   return (
     <View>

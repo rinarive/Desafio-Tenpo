@@ -18,7 +18,6 @@ function Transaction({navigation}) {
 }
 
 export default Transaction;
-
 const styles = StyleSheet.create({
     container: {
         flex:1,
