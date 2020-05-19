@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Modal, Button, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Modal, Button, TextInput, Image, Alert } from 'react-native';
 import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons'
 
 
@@ -44,7 +44,10 @@ export default function Form() {
                 color={'#00BAA4'}
                 style={styles.btnSend}
                 title='Enviar'
-                onPress={()=>setModal(false)}/> 
+                onPress={()=>{
+                  Alert.alert('¡Tu reclamo ha sido enviado con éxito!',
+                  'Solucionaremos el problema lo más pronto posible')
+                  setModal(false)}}/> 
              </View>
                         
             </View>  
@@ -52,8 +55,10 @@ export default function Form() {
 
         </Modal>
 
-        <View style={styles.containerFaq}>
+        <Text style={styles.textSimple}>Inicia un reclamo:</Text>
 
+
+        <View style={styles.containerFaq}>
           <View style={styles.question}>
             <TouchableOpacity style={styles.button} onPress={openModal}>
               <Icon
@@ -110,14 +115,19 @@ export default function Form() {
       width:'100%' ,
     },
 
+    textSimple: {
+
+
+    },
+
     containerFaq: {
-      
+      flex: 0.9,
       justifyContent: 'space-evenly',
       backgroundColor: '#F7F7F7',
       borderRadius: 8,
       marginLeft:16,
       marginRight: 16,
-      marginBottom: 20,
+      marginBottom: 10,
       paddingTop: 8,
       paddingBottom: 8,
      
@@ -167,9 +177,9 @@ export default function Form() {
 
     chatbox: {
       alignSelf: 'flex-end',
-      height:50,
-      width: 50,
-      marginBottom: 34
+      height:45,
+      width: 45,
+      marginBottom: 15
     },
     
     //____________MODAL STYLES____________
@@ -199,7 +209,7 @@ export default function Form() {
     textForm: {
       marginBottom: 14,
       fontSize:12,
-      color: '#595959',
+      textDecorationColor: '#595959',
       fontFamily: 'Gotham-Book',
     },
     

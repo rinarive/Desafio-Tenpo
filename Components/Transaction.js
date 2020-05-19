@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         alignItems:'center',
-        paddingTop:30,
+        justifyContent:'space-evenly',
+        position: 'relative', 
+        // alignContent: ''
+        // justifyContent: 'flex-start'
+        // paddingTop:30,
     },
 })

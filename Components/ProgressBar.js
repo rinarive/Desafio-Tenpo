@@ -11,7 +11,7 @@ function ProgressBar() {
  
 
     return (
-        <View >
+        <View style={styles.container} >
             <Text style={styles.titleText}>
                 Tu retiro está en curso:
             </Text>
@@ -61,6 +61,11 @@ function ProgressBar() {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 0.9,
+        
+    },
+
     titleText: {
         padding: '5%',
         fontSize:14,
