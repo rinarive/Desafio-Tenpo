@@ -32,7 +32,6 @@ export default Voucher
 
 
 const styles = StyleSheet.create({
-
     
     voucherContainer:{
         height:110,
