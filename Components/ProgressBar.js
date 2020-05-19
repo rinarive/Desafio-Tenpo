@@ -22,7 +22,7 @@ function ProgressBar() {
         }
       });
     }
-  }, 1000);
+  }, 3000);
 
   return (
     <View>
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
+    
   },
   step: {
     alignItems: "center",
