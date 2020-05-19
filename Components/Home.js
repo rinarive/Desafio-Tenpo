@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
 
     type:{
       fontSize:14,
-      width:120,
+      width:130,
       color: '#595959',
       fontFamily: 'Gotham-Book',
       marginTop:5, 
